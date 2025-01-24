@@ -220,6 +220,9 @@ DEFAULT_FROM_EMAIL = 'no-reply@flavorscape.com'  # Default sender for email comm
 #     fail_silently=False,
 # )
 
+CRON_CLASSES = [
+    "app.crons.CheckAvailabilityCronJob",
+]
 
 CRONJOBS = [
     ('*/2 * * * *', 'app.crons.CheckAvailabilityCronJob'),
